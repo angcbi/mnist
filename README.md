@@ -2,7 +2,7 @@
 目录说明
 -----
 
->
+>>>>
 source_mnist/  原始MNIST数据集
 data/          numpy解析后的数据集
 model/         训练的模型
@@ -24,14 +24,13 @@ t10k-labels-idx1-ubyte:  test set labels
 2. MNIST 文件格式说明
 > 
 TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
-[offset] [type]          [value]          [description] 
-0000     32 bit integer  0x00000801(2049) magic number (MSB first) 
-0004     32 bit integer  60000            number of items 
-0008     unsigned byte   ??               label 
-0009     unsigned byte   ??               label 
-........ 
-xxxx     unsigned byte   ??               label
-The labels values are 0 to 9.
+|[offset]| [type]|          [value]|          [description]|
+|----|----|----|----| 
+|0000|     32 bit integer|  0x00000801(2049) magic number (MSB first) |
+|0004|     32 bit integer|  60000|            number of items |
+|0008|     unsigned byte||   ??  |            label |
+|0009|     unsigned byte|   ??   |             label |
+|xxxx|     unsigned byte|   ??|               label|
 
 TRAINING SET IMAGE FILE (train-images-idx3-ubyte):
 [offset] [type]          [value]          [description] 
