@@ -16,13 +16,13 @@ test/          测试图片
 
 1. MNIST共6000张训练图片，1000张测试图片，共有四个二进制文件
 >
-train-images-idx3-ubyte: training set images 
-train-labels-idx1-ubyte: training set labels 
-t10k-images-idx3-ubyte:  test set images 
-t10k-labels-idx1-ubyte:  test set labels
+- train-images-idx3-ubyte：  training set images 
+- train-labels-idx1-ubyte:   training set labels 
+- t10k-images-idx3-ubyte:    test set images 
+- t10k-labels-idx1-ubyte:    test set labels
 
 2. MNIST 文件格式说明
-> 
+
 TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
 |[offset]| [type]|          [value]|          [description]|
 |----|----|----|----| 
