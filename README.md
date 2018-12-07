@@ -16,14 +16,15 @@ test/          测试图片
 
 1. MNIST共6000张训练图片，1000张测试图片，共有四个二进制文件
 >
-train-images-idx3-ubyte: training set images 
-train-labels-idx1-ubyte: training set labels 
-t10k-images-idx3-ubyte:  test set images 
-t10k-labels-idx1-ubyte:  test set labels
+- train-images-idx3-ubyte：  training set images 
+- train-labels-idx1-ubyte:   training set labels 
+- t10k-images-idx3-ubyte:    test set images 
+- t10k-labels-idx1-ubyte:    test set labels
 
 2. MNIST 文件格式说明
-> 
-TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
+
+TRAINING SET LABEL FILE (train-labels-idx1-ubyte)
+
 |[offset]| [type]|          [value]|          [description]|
 |----|----|----|----| 
 |0000|     32 bit integer|  0x00000801(2049) magic number (MSB first) |
@@ -32,16 +33,18 @@ TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
 |0009|     unsigned byte|   ??   |             label |
 |xxxx|     unsigned byte|   ??|               label|
 
-TRAINING SET IMAGE FILE (train-images-idx3-ubyte):
-[offset] [type]          [value]          [description] 
-0000     32 bit integer  0x00000803(2051) magic number 
-0004     32 bit integer  60000            number of images 
-0008     32 bit integer  28               number of rows 
-0012     32 bit integer  28               number of columns 
-0016     unsigned byte   ??               pixel 
-0017     unsigned byte   ??               pixel 
-........ 
-xxxx     unsigned byte   ??               pixel
+TRAINING SET IMAGE FILE (train-images-idx3-ubyte)
+
+|[offset]| [type]|          [value]     |     [description] 
+|----|----|----|----| 
+|0000|     32 bit integer|  0x00000803(2051| magic number |
+|0004|     32 bit integer|  60000          | number of images |
+|0008|     32 bit integer|  28             | number of rows |
+|0012|     32 bit integer|  28             | number of columns |
+|0016|     unsigned byte |  ??             | pixel |
+|0017|     unsigned byte |  ??             | pixel |
+|xxxx|     unsigned byte |  ??             | pixel|
+
 Pixels are organized row-wise. Pixel values are 0 to 255. 0 means background (white), 255 means foreground (black).
 
 TEST SET LABEL FILE (t10k-labels-idx1-ubyte):
